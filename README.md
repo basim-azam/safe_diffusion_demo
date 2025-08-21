@@ -43,7 +43,7 @@ These correspond to the ablation axes in the paper.
 ## 📓 Usage
 Open the provided Colab notebook:
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/basimazam/safe_diffusion_demo/blob/main/Demo_Safe_Diffusion_Guidance.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)][(https://colab.research.google.com/github/basimazam/safe_diffusion_demo/blob/main/Demo_Safe_Diffusion_Guidance.ipynb)](https://github.com/basim-azam/safe_diffusion_demo/blob/main/Demo_Safe_Diffusion_Guidance.ipynb)
 
 Follow the cells step by step:
 - Enter your prompt (or select an example).
