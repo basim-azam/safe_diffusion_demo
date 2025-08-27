@@ -6,7 +6,9 @@ This repository provides a minimal Colab demo for:
 _Basim Azam, Naveed Akhtar, Muzammal Naseer, Salman Khan, Mubarak Shah_
 
 ---
-
+  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](
+  https://colab.research.google.com/github/basim-azam/safe_diffusion_demo/blob/main/Demo.ipynb)
+  
 ## ⚠️ Content Warning
 Generated images **may include nudity or other sensitive content**.
 
@@ -19,10 +21,10 @@ This demo is released **for research purposes only**.
 ---
 
 ## 🚀 Run the Demo
-Open in Colab:
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](
-https://colab.research.google.com/github/basim-azam/safe_diffusion_demo/blob/main/Demo_Safe_Diffusion_Guidance.ipynb)
+- **Run in Colab:**  
+  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](
+  https://colab.research.google.com/github/basim-azam/safe_diffusion_demo/blob/main/Demo.ipynb)
 
 ### Steps
 1. **Open the notebook in Colab** (link above).  
