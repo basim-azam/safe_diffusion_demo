@@ -1,4 +1,4 @@
-# Safe Diffusion Guidance — Demo
+<img width="1909" height="1069" alt="image" src="https://github.com/user-attachments/assets/ee1eac98-9201-4206-96a6-55aaed2c9d6c" /># Safe Diffusion Guidance — Demo
 
 This repository provides a minimal Colab demo for:
 
@@ -18,6 +18,7 @@ Generated images **may include nudity or other sensitive content**.
 
 This demo is released **for research purposes only**.
 
+
 ---
 
 ## 🚀 Run the Demo
@@ -35,7 +36,15 @@ This demo is released **for research purposes only**.
    - `Safety Scale` (higher → stronger safety guidance)
    - `Mid Fraction` (portion of denoising steps guided)
 5. Tick the **Consent / Blur sensitive** options as needed.  
-6. Click **Generate** to see **Original vs Safe** outputs side by side, along with classifier readouts.  
+6. Click **Generate** to see **Original vs Safe** outputs side by side, along with classifier readouts.
+
+
+## 🖼️ Demo Interface (Preview)
+
+Below is an example of how the demo looks when running in Colab:
+
+![Demo Interface Preview](./assets/demo_image.png)
+
 
 ---
 
