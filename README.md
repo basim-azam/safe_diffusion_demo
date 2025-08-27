@@ -1,4 +1,4 @@
-<img width="1909" height="1069" alt="image" src="https://github.com/user-attachments/assets/ee1eac98-9201-4206-96a6-55aaed2c9d6c" /># Safe Diffusion Guidance — Demo
+# Safe Diffusion Guidance — Demo
 
 This repository provides a minimal Colab demo for:
 
