@@ -22,7 +22,7 @@ This demo is released **for research purposes only**.
 Open in Colab:
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](
-https://colab.research.google.com/github/basim-azam/safe_diffusion_demo/blob/main/Demo_Safe_Diffusion_Guidance.ipynb)
+https://github.com/basim-azam/safe_diffusion_demo/blob/main/Demo.ipynb)
 
 ### Steps
 1. **Open the notebook in Colab** (link above).  
