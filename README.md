@@ -1,72 +1,50 @@
-# Safe Diffusion Guidance — Demo (Classifier-Guided Sampling)
+# Safe Diffusion Guidance — Demo
 
-This repository contains a minimal demo of **Safe Diffusion Guidance**, an in-process safety mechanism for text-to-image generation.
+This repository provides a minimal Colab demo for:
 
----
-
-## 🌐 Overview
-Instead of blocking prompts or rejecting images *after* they are rendered, Safe Diffusion Guidance steers the **reverse-diffusion trajectory itself** toward safer outcomes while maintaining fidelity and alignment with the user prompt.  
-The safety signal comes from a classifier over mid-UNet features, which guides the denoiser away from unsafe regions and toward “safe” features.
+**Principled Latent Trajectory Guidance and Benchmarking for Safer Text-to-Image Generation**  
+_Basim Azam, Naveed Akhtar, Muzammal Naseer, Salman Khan, Mubarak Shah_
 
 ---
 
-## ⚙️ Core Idea
-- **Look-ahead (latent prediction) guidance**: estimate what the clean latent would look like if denoising stopped now, and apply a loss that discourages unsafe features.  
-- **Classifier-based guidance**: gradients from a trained safety classifier attract latents toward *safe* features and repel unsafe ones.  
+## ⚠️ Content Warning
+Generated images **may include nudity or other sensitive content**.
 
-Together these modify the UNet score function, yielding denoiser-centric safety controls rather than surface-level filters.
+- The **first 4 examples** are from figures shown in the associated paper.  
+- Use the provided controls (`Prompt`, `Seed`, `Safety Scale`, `Mid Fraction`) to explore safe vs. original generations.  
+- A `Blur sensitive` option is included to automatically blur outputs flagged as unsafe.  
 
----
-
-## 🚀 What the Demo Does
-The demo notebook will:
-1. Load a **Stable Diffusion v1.5** pipeline (via 🤗 Diffusers).  
-2. Download a **pre-trained safety classifier** from Hugging Face Hub.  
-3. Generate two images per prompt:
-   - **Original** (no safety guidance)  
-   - **Safe (CG)** using classifier-guided sampling  
-4. Run post-hoc classification on both to quantify the safety shift.  
+This demo is released **for research purposes only**.
 
 ---
 
-## 🔧 Key Controls
-- `NUM_STEPS` — number of denoising steps.  
-- `CFG_SCALE` — classifier-free guidance scale (prompt fidelity).  
-- `SAFETY_SCALE` — how strongly the safety guidance is applied.  
-- `MID_FRACTION` — fraction of denoising steps where safety guidance is active.  
-- `SAFE_IDX` — index of the “safe” class in classifier labels (`[gore, hate, medical, safe, sexual]`, here **safe = 3**).  
-
-These correspond to the ablation axes in the paper.
-
----
-
-## 📓 Usage
-Open the provided Colab notebook:
+## 🚀 Run the Demo
+Open in Colab:
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](
 https://colab.research.google.com/github/basim-azam/safe_diffusion_demo/blob/main/Demo_Safe_Diffusion_Guidance.ipynb)
 
-Follow the cells step by step:
-- Enter your prompt (or select an example).
-- Adjust `SAFETY_SCALE` and `MID_FRACTION` to explore the trade-off between image quality and safety.
-- Compare Original vs Safe outputs side by side.
+### Steps
+1. **Open the notebook in Colab** (link above).  
+2. Run the setup cells to install dependencies and load the models.  
+3. Choose an **Example** or enter your own **Prompt**.  
+4. Adjust parameters:
+   - `Seed` (reproducibility, or randomize)
+   - `Safety Scale` (higher → stronger safety guidance)
+   - `Mid Fraction` (portion of denoising steps guided)
+5. Tick the **Consent / Blur sensitive** options as needed.  
+6. Click **Generate** to see **Original vs Safe** outputs side by side, along with classifier readouts.  
 
 ---
 
 ## 📂 Structure
+
+```
 safe_diffusion_demo/
-│
-├── Demo_Safe_Diffusion_Guidance.ipynb # Main Colab demo
-├── adaptive_classifiers.py # Classifier utilities
-├── custom_cg.py # Custom classifier guidance
+├── Demo.ipynb   
+├── adaptive_classifiers.py              
+├── custom_cg.py                         
 └── README.md
+```
 
----
 
-## ⚠️ Disclaimer
-This is a **demo only**.  
-- The released classifier and settings are illustrative.  
-- The implementation is research code; real deployments require **additional safeguards** and policy layers.  
-- Detailed training code will be released upon acceptance of the associated paper.  
-
----
