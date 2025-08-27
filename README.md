@@ -14,7 +14,7 @@ Generated images **may include nudity or other sensitive content**.
 - Use the provided controls (`Prompt`, `Seed`, `Safety Scale`, `Mid Fraction`) to explore safe vs. original generations.  
 - A `Blur sensitive` option is included to automatically blur outputs flagged as unsafe.  
 
-This demo is released **for research purposes only** and is **not a production safety filter**.
+This demo is released **for research purposes only**.
 
 ---
 
@@ -48,9 +48,3 @@ safe_diffusion_demo/
 ```
 
 
----
-
-## ⚠️ Disclaimer
-- This is **research code** only.  
-- The released classifier and settings are illustrative.  
-- Deployments require **additional safeguards, policy enforcement, and moderation layers**.
