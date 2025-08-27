@@ -39,12 +39,14 @@ https://colab.research.google.com/github/basim-azam/safe_diffusion_demo/blob/mai
 
 ## 📂 Structure
 
----
+```
 safe_diffusion_demo/
-├── Demo_Safe_Diffusion_Guidance.ipynb # Main Colab demo
-├── adaptive_classifiers.py # Classifier utilities
-├── custom_cg.py # Custom classifier guidance
+├── Demo.ipynb   
+├── adaptive_classifiers.py              
+├── custom_cg.py                         
 └── README.md
+```
+
 
 ---
 
